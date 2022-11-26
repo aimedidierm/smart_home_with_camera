@@ -152,9 +152,9 @@ require 'check-login.php';
                                     $sql ="UPDATE device_details SET status = ? WHERE id = ? limit 1";
                                     $stm = $db->prepare($sql);
                                     if ($stm->execute(array($status,$sid))) {
-                                    //
+                                        print "<script>window.location.assign('home.php')</script>";
                                     } else {
-                                    //
+                                        print "<script>window.location.assign('home.php')</script>";
                                     }
                                     }
                                     ?>
