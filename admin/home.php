@@ -140,7 +140,7 @@ require 'check-login.php';
                                             <td><?php echo $count?></td>
                                             <td><?php echo $row['device_name']?></td>
                                             <td><?php echo $row['type']?></td>
-                                            <td><a <?php if($row['status']=='0'){echo "class='btn btn-success' href='home.php?id=".$row['id']."&status=1'>ON";} else {echo "class='btn btn-danger' href='home.php?id=".$row['id']."&status=0'>OFF";}?></a></td>
+                                            <td><a <?php if($row['status']=='1'){echo "class='btn btn-success' href='home.php?id=".$row['id']."&status=2'>ON";} else {echo "class='btn btn-danger' href='home.php?id=".$row['id']."&status=1'>OFF";}?></a></td>
                                         </tr>
                                         <?php
                                         $count++;
@@ -166,6 +166,48 @@ require 'check-login.php';
                     </div>
                     <!-- /.panel -->
                 </div>
+        </div>
+        <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Manage your devices with time
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Time ON</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                $sql = "SELECT * FROM device_details ORDER BY id ASC";
+                $stmt = $db->prepare($sql);
+                $stmt->execute();
+                if ($stmt->rowCount() > 0) {
+                    $count = 1;
+                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    ?>
+                <tr>
+                    <td><?php echo $count?></td>
+                    <td><?php echo $row['device_name']?></td>
+                    <td><?php echo $row['type']?></td>
+                    <td><input type="time" id="time1" value="09:12" min="00:00" max="12:59"></td>
+                </tr>
+                <?php
+                $count++;
+                }
+            }
+                ?>
+                </tbody>
+            </table>
+            </div>
+            <!-- /.panel-body -->
+        </div>
         </div>
         <!-- /#page-wrapper -->
 
