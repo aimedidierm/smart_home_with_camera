@@ -38,12 +38,10 @@ void loop() {
     http.begin(client, serverName);
     //http.addHeader("Content-Type", "application/json");
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-    String httpRequestData = "test";
-    int      httpResponseCode = http.POST(httpRequestData);
-    if (httpResponseCode>0) {
-      s.println(httpResponseCode);
-      String payload = http.getString();
-      s.println(payload);
+    http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+    int httpCode=http.GET();
+    String payload=http.getString(); // get data from webhost continously
+    s.print(payload);
       DynamicJsonBuffer jsonBuffer;
       JsonObject& root = jsonBuffer.parseObject(payload);
       int d1 = root["d1"];
@@ -83,6 +81,6 @@ void loop() {
                 digitalWrite(device6, HIGH);
                 }
       
-    }
     http.end();
+    delay(300);
 }

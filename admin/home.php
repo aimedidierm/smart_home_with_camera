@@ -180,7 +180,7 @@ require 'check-login.php';
                         <th>#</th>
                         <th>Name</th>
                         <th>Type</th>
-                        <th>Time ON</th>
+                        <th>Time OFF</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -196,7 +196,7 @@ require 'check-login.php';
                     <td><?php echo $count?></td>
                     <td><?php echo $row['device_name']?></td>
                     <td><?php echo $row['type']?></td>
-                    <td><input type="time" id="time1" value="09:12" min="00:00" max="12:59"></td>
+                    <td><input type="time" id="time1" value="2018-07-22 09:12" min=" 2018-07-22 00:00" max="2018-07-22 12:59"></td>
                 </tr>
                 <?php
                 $count++;
