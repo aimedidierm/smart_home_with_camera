@@ -111,7 +111,7 @@ $apassword=md5($_POST['apassword']);
                             <a href="home.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="video.php"><i class="fa fa-camera-retro fa-fw"></i> Video</a>
+                            <a href="http://192.168.43.51/"><i class="fa fa-camera-retro fa-fw"></i> Video</a>
                         </li>
                         <li>
                             <a href="settings.php"><i class="fa fa-gear fa-fw"></i> Settings</a>

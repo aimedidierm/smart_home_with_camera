@@ -87,7 +87,7 @@ require 'check-login.php';
                             <a href="home.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="video.php"><i class="fa fa-camera-retro fa-fw"></i> Video</a>
+                            <a href="http://192.168.43.51/"><i class="fa fa-camera-retro fa-fw"></i> Video</a>
                         </li>
                         <li>
                             <a href="settings.php"><i class="fa fa-gear fa-fw"></i> Settings</a>
@@ -196,7 +196,7 @@ require 'check-login.php';
                     <td><?php echo $count?></td>
                     <td><?php echo $row['device_name']?></td>
                     <td><?php echo $row['type']?></td>
-                    <td><input type="time" id="time1" value="2018-07-22 09:12" min=" 2018-07-22 00:00" max="2018-07-22 12:59"></td>
+                    <td><input type="time" id="time1" value="09:12" min="00:00" max="12:59"></td>
                 </tr>
                 <?php
                 $count++;

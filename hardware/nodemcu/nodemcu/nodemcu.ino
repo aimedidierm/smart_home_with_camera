@@ -80,7 +80,6 @@ void loop() {
               } else {
                 digitalWrite(device6, HIGH);
                 }
-      
     http.end();
     delay(300);
 }
