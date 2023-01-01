@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 20, 2022 at 01:54 AM
+-- Generation Time: Jan 02, 2023 at 12:14 AM
 -- Server version: 8.0.29-0ubuntu0.20.04.3
 -- PHP Version: 7.4.3
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `device_details` (
   `id` int NOT NULL,
   `device_name` varchar(200) NOT NULL,
-  `status` int NOT NULL,
+  `status` enum('1','2') NOT NULL,
   `type` varchar(100) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -40,12 +40,12 @@ CREATE TABLE `device_details` (
 --
 
 INSERT INTO `device_details` (`id`, `device_name`, `status`, `type`) VALUES
-(4, 'Fridge', 0, 'fridge'),
-(1, 'LAMP 1', 0, 'lamp1'),
-(2, 'LAMP2', 0, 'lamp2'),
-(3, 'LAMP 3', 0, 'lamp3'),
-(5, 'TV', 0, 'tv'),
-(6, 'Radio', 0, 'radio');
+(4, 'Fridge', '2', 'fridge'),
+(1, 'LAMP 1', '2', 'lamp1'),
+(2, 'LAMP2', '2', 'lamp2'),
+(3, 'LAMP 3', '2', 'lamp3'),
+(5, 'TV', '2', 'tv'),
+(6, 'Radio', '2', 'radio');
 
 -- --------------------------------------------------------
 
